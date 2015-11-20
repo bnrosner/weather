@@ -6,9 +6,14 @@ $(function() {
     // Put your code here. Don't change any other code in this file. You will be sad.
     var markup = "Temperature outside is " + data.currently.apparentTemperature + ", tomorrow's high is " + data.daily.data[0].apparentTemperatureMax + ", the following day's high is " + data.daily.data[1].apparentTemperatureMax;
     // End of your code
+    var markup2 = data.currently.summary;
+
 
     $('.weather-report').html(markup);
+    $('.weather-report2').html(markup2);
   }
+
+
   $('a.get-the-weather').on('click', function(event) {
     event.preventDefault();
     $.ajax({
